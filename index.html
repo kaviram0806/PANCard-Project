@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Application Form</title>
+    <link rel="stylesheet" href="style.css"/> 
+</head>
+<body> 
+        <header><h2>Request for New Pan Card or and Changes or Correction in Pan Data </h2></header>         
+        <div class="navbar"> 
+            <ul>           
+            <li><a href="#home">Home</a></li>
+            <li><a href="#help">Need any Help?</a></li>
+            <li><a href="#applypan">How to apply a PAN Card?</a></li>
+            </ul>           
+        </div>         
+        <table>
+            <form>
+                <colgroup>
+                    <col span="1" style="width:5%;">
+                    <col span="2" style="width:30%">
+                    <col span="3" style="width:30%">                    
+                </colgroup>       
+
+                <!-- <ul class ="listcontainer"> -->
+                <tr><td><div class="checkboxcontainer">
+                    <input type="checkbox" id="citizen_status" name="citizen_status">
+                    </div></td> <!--<li></li>-->
+                    <td><p>Are you a citizen of India?</p></td>
+                    <td colspan="3"><input type="radio" id="yes" name="citizenstatus" value="Yes">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="citizenstatus" value="No">
+                        <label for="no">No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" id="pan_number" name="pan_number">
+                        </div>
+                    </td><!-- <td><li></li></td> -->
+                    <td><label for="panNumber">Permanent Account Number(PAN) </label></td>
+                    <td colspan="3"><input type="text" name="panNumber" id="panNumber" pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]"></td>
+                </tr> 
+                <tr>
+                    <td rowspan="4">
+                        <div class="checkboxcontainer">
+                        <input type="checkbox" id="check_title" name="check_title">
+                        </div>
+                    </td><!-- <td rowspan="4"><li></li></td> -->
+                    <td rowspan="4"><p>Name along with Title </p></td>                    
+                    <td colspan="3"><input type="radio" id="mr" name="title" value="Shri/Mr">
+                        <label for="mr">Shri/Mr</label>
+                        <input type="radio" id="mrs" name="title" value="Shri/Mrs">
+                        <label for="mrs">Shri/Mrs</label>
+                        <input type="radio" id="kumari" name="title" value="Kumari/Ms">
+                        <label for="kumari">Kumari/Ms</label>
+                        <br>
+                    </td>
+                </tr>
+                <tr>                   
+                    <td colspan="3">
+                        <!-- <label for="fname">First name: </label> -->
+                        <input type="text" id="fname" name="fname" maxlength="15" placeholder="First Name:">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <!-- <label for="mname">Middle name: </label> -->
+                        <input type="text" id="mname" name="mname" maxlength="15" placeholder="Middle Name:">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <!-- <label for="lname">Last name: </label> -->
+                        <input type="text" id="lname" name="lname" maxlength="15" placeholder="Last Name:">
+                    </td>
+                </tr> 
+                <tr>
+                    <!-- <td><li></li></td> -->
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="nametobeprinted" id="nametobeprinted">
+                    </div>
+                    </td>
+                    <td><p>Name, you would like to be printed in the card</p>
+                        <p><span class="greentext">(Prefix like <br>
+                        Shri,Kumari,Late,Dr,CA,Mr,Mrs,M/s or Alias,<br>
+                        etc., are not allowed)</span></p>
+                    </td>
+                    <td colspan="3"><label for="nameprinted"> </label>
+                        <input type="text" name="name" id="nameprinted" maxlength="45">
+                    </td>
+                </tr> 
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="singleparentmother" id="singleparentmother">
+                    </div>
+                    </td>
+                    <!-- <td><li></li></td> -->
+                    <td><p>Is your mother single parent and you wish to apply for pan by furnishing your mother 
+                            name</p>
+                    </td>
+                    <td colspan="3"><input type="radio" id="yes" name="single_parent_mother" value="Yes">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="single_parent_mother" value="No">
+                        <label for="no">No</label>
+                    </td>
+                </tr> 
+                <tr>
+                    <td rowspan="3"><div class="checkboxcontainer">
+                        <input type="checkbox" name="fathersname" id="fathersname">
+                        </div>
+                    </td><!-- <td rowspan="3"><li></li></td> -->
+                    <td rowspan="3"><p>Father's Name</p>
+                        <p><span class="greentext">(Mandatory Field even married women should give Father's Name only)</span></p>
+                    </td>                
+                    <td colspan="3"><!-- <label for="fatherfirstname">First name: </label> -->
+                        <input type="text" id="fatherfirstname" name="firstname" maxlength="15" placeholder="First Name:">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <!-- <label for="fathermiddlename">Middle name: </label> -->
+                        <input type="text" id="fathermiddlename" name="middlename" maxlength="15" placeholder="Middle Name:">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <!-- <label for="fatherlastname">Last name: </label> -->
+                        <input type="text" id="fatherlastname" name="lastname" maxlength="15" placeholder="Last Name:">
+                    </td>
+                </tr> 
+                <tr> 
+                    <td rowspan="3"><div class="checkboxcontainer">
+                        <input type="checkbox" name="mothersname" id="mothersname">
+                        </div>
+                    </td>
+                    <!-- <td rowspan="3"><li></li></td>                    -->
+                    <td rowspan="3"><p>Mother's Name <span class="greentext"> (Mother's Name is optional)</span></p></td>
+                    <td colspan="3"><!-- <label for="motherfirstname">First name: </label> -->
+                        <input type="text" id="motherfirstname" name="firstname" maxlength="15" placeholder="FirstName:">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <!-- <label for="mothermiddlename">Middle name: </label> -->
+                        <input type="text" id="mothermiddlename" name="middlename" maxlength="15" placeholder="Middle Name:">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <!-- <label for="motherlastname">Last name: </label> -->
+                        <input type="text" id="motherlastname" name="lastname" maxlength="15" placeholder="Last Name:">
+                        
+                    </td>
+                </tr> 
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="parentname" id="parentname">
+                        </div>
+                    </td><!-- <td><li></li></td> -->
+                    <td><p> Select parent name which is to be printed on the card</p>
+                        <p><span class="greentext">(In case no option provided then PAN card will be issued with Father's name)</span></p>
+                    </td>
+                    <td colspan="3"><input type="radio" id="fathername" name="parent_name" value="Father's Name">
+                        <label for="fathername">Father's Name</label>
+                        <input type="radio" id="mothername" name="parent_name" value="Mother's Name">
+                        <label for="mothername">Mother's Name</label>
+                    </td>
+                </tr>  
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkdateofbirth" id="checkdateofbirth">
+                        </div>
+                    </td><!-- <td><li></li></td> -->
+                    <td><p>Date Of Birth</p></td>
+                    <td colspan="3"><input type="date" id="dateofbirth" name="date_of_birth"></td>
+                </tr>
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkgender" id="checkgender">
+                        </div>
+                    </td><!-- <td><li></li></td>                     -->
+                    <td><p>Gender</p></td>
+                    <td colspan="3"><input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>  
+                        <input type="radio" id="transgender" name="gender" value="Transgender">
+                        <label for="female">Transgender</label>                      
+                    </td>
+                </tr>
+                <tr>                  
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkphotomismatch" id="checkphotomismatch">
+                        </div>
+                    </td><!-- <td><li></li></td>   -->
+                    <td colspan="4"><p>Photo Mismatch</p></td>                    
+                </tr> 
+                <tr>  
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checksignature" id="checksignature">
+                        </div>
+                    </td><!-- <td><li></li></td>                   -->
+                    <td colspan="4"><p>Signature Mismatch</p></td>                    
+                </tr>
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkaddress" id="checkaddress">
+                        </div>
+                    </td><!-- <td><li></li></td> -->
+                    <td><p>Address for Communication</p></td>
+                    <td colspan="3"><input type="radio" id="residential" name="address" value="Residential">
+                        <label for="residential">Residential</label>
+                        <input type="radio" id="office" name="address" value="Office">
+                        <label for="office">Office</label>
+                    </td>
+                </tr>
+                <tr>                
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkofficename" id="checkofficename">
+                        </div>
+                    </td><!-- <td><li></li></td> -->
+                    <td><p>Office Name</p></td>
+                    <td colspan="3"><input type="text" id="companyname" name="company_name" placeholder="Company Name:"></td>
+                </tr>
+                <tr> 
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkflatno" id="checkflatno">
+                        </div>
+                    </td><!-- <td><li></li></td>                    -->
+                    <td><p>Flat No/Door No/Block No</p></td>
+                    <td colspan="3"><input type="text" id="flatno" name="flat_no" placeholder="Flat No/Door No/Block No:"></td>
+                </tr>
+                <tr>                  
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkvillage" id="checkvillage">
+                        </div>
+                    </td><!-- <td><li></li></td>  -->
+                    <td><p>Name of Building/Premises or Village</p></td>
+                    <td colspan="3"><input type="text" id="village" name="village" placeholder="City/Village:"></td>
+                </tr>
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkstreet" id="checkstreet">
+                        </div>
+                    </td><!-- <td><li></li></td>                     -->
+                    <td><p>Road/Street/Lane/Post Office</p></td>
+                    <td colspan="3"><input type="text" id="street" name="street" placeholder="Street:"></td>
+                </tr>
+                <tr>                  
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checklandmark" id="checklandmark">
+                        </div>
+                    </td><!-- <td><li></li></td>   -->
+                    <td><p>Area/Locality/Taluka/Sub division</p></td>
+                    <td colspan="3"><input type="text" id="landmark" name="landmark" placeholder="Landmark:"></td>
+                </tr>
+                <tr>  
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkdistrict" id="checkdistrict">
+                        </div>
+                    </td><!-- <td><li></li></td>                   -->
+                    <td><p>Town/City/District</p></td>
+                    <td colspan="3"><input type="text" id="district" name="district" placeholder="District:"></td>
+                </tr>
+                <tr> 
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkstate" id="checkstate">
+                        </div>
+                    </td><!-- <td><li></li></td>                -->
+                    <td><p>State/Union Territory</p></td>
+                    <td colspan="3"><div class ="dropdowncontainer">
+                        <select name="state" id="state">
+                        <option value="Select">--Please Select--</option>
+                        <option value="TN">TamilNadu</option>
+                        <option value="KL">Kerala</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="TL">Telangana</option>
+                      </select>
+                    </div> 
+                </td>
+                </tr>
+                <tr> 
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkpincode" id="checkpincode">
+                        </div>
+                    </td><!-- <td><li></li></td>                    -->
+                    <td><p>PIN Code</p></td>
+                    <td colspan="3"><input type="text" id="pincode" name="pincode" placeholder="Pincode:"></td>
+                </tr>
+                <tr>  
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkcountry" id="checkcountry">
+                        </div>
+                    </td><!-- <td><li></li></td>                   -->
+                    <td><label for="countries">Country</label></td>
+                    <td colspan="3"><div class ="dropdowncontainer">
+                        <select name="countries" id="countries">
+                          <option value="Select">--Please Select--</option>
+                          <option value="IND">India</option>
+                          <option value="UK">United Kingdom</option>
+                          <option value="USA">Unites States of America</option>
+                          <option value="PAK">Pakistan</option>
+                        </select>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkzip" id="checkzip">
+                        </div>
+                    </td><!-- <td><li></li></td> -->
+                    <td><p>ZIP</p></td>
+                    <td colspan="3"><input type="text" id="zip" name="zip"></td>
+                </tr>
+                <tr>  
+                    <td><div class="checkboxcontainer">
+                        <input type="checkbox" name="checkupdateaddress" id="checkupdateaddress">
+                        </div>
+                    </td><!-- <td><li></li></td>                   -->
+                    <td colspan="4"><p>If you desire to update other address, 
+                        give required detail & submit the proof of other address also</p></td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><div class="checkboxcontainer">
+                        <input type="checkbox" name="checktelephoneno" id="checktelephoneno">
+                        </div>
+                    </td><!-- <td rowspan="3"><li></li></td> -->
+                    <td rowspan="3"><p>Telephone No</p></td>
+                    <td colspan="3"><label for="countryorstdcode">Country/SD Code</label>
+                                    <select name="countryorstdcode" id="countryorstdcode">
+                                    <option value="Select">--Please Select--</option>
+                                    <option value="UK">0044</option>
+                                    <option value="India">0091</option>91</option>
+                                    <option value="USA">001</option>
+                                    <option value="Russia">007</option>
+                                    <option value="China">0086</option>
+                                    </select>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><p><label for="mobileno">Mobile No</label>
+                        <input type="radio" id="mobileno" name="mobileno" value="MobileNo"></p>
+                    </td>                    
+                    <td colspan="2"><p><label for="telephoneno">Telephone No</label>
+                        <input type="radio" id="telephoneno" name="telephoneno" value="TelephoneNo"></p>
+                    </td>                    
+                </tr>
+                <tr><td><label for="areaorstd">Area/STD</label> 
+                    <input type="text" id="areaorstd" name="areaorstd">                    
+                    </td>
+                    <td colspan="2"><label for="telormobileno">Telephone No/Mobile No</label> 
+                        <input type="text" id="telormobileno" name="telormobileno" placeholder="+91/+0123">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkemail" id="checkemail">
+                            </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td><label for="email_id">Email</label></td>
+                    <td colspan="3"><input type="email" id="email_id" name="email" placeholder="example@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkindiancitizen" id="checkindiancitizen">
+                            </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td><p>In case of citizen of India, then</p></td>
+                    <td colspan="3"><input type="radio" id="aadhar" name="indiancitizen" value="AADHAR">
+                        <label for="aadhar">AADHAR</label>
+                        <input type="radio" id="eid" name="indiancitizen" value="EID">
+                        <label for="eid">EID</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkaadharnumber" id="checkaadharnumber">
+                        </div>                        
+                    </td>
+                    <!-- <td><li></li></td> -->
+                    <td><p>Aadhar Number</p></td>
+                    <td colspan="3"><input type="text" id="aadharnumber" name="aadharnumber" placeholder="Aadhar Number:"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkaadharname" id="checkaadharname">
+                        </div>                        
+                    </td>
+                    <!-- <td><li></li></td> -->
+                    <td><p>Name as per Aadhar Card</p></td>
+                    <td colspan="3"><input type="text" id="aadharname" name="aadharname" placeholder="Aadhar Name:"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkgstn" id="checkgstn">
+                        </div>                        
+                    </td> <!-- <td><li></li></td> -->
+                    <td><p>GSTN</p></td>
+                    <td colspan="3"><input type="text" id="gstn" name="gstn"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkproofofpan" id="checkproofofpan">
+                        </div>                        
+                    </td> <!-- <td><li></li></td> -->
+                    <td colspan="4"><p>Mention other Permanent Account Number(PAN's), if any inadvertently
+                        allocated to you can submit the proof of surrendered PAN along with the application</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkpanone" id="checkpanone">
+                        </div>                        
+                    </td>
+                    <!-- <td><li></li></td> -->
+                    <td><div class="nostyletextboxcontainer"><label for="panone">PAN1</label> 
+                        <input type="text" id="panone" name="panone"></div>
+                     </td>
+                    <td colspan="3"><div class="nostyletextboxcontainer">
+                        <label for="pantwo">PAN2</label>                         
+                        <input type="text" id="pantwo" name="pantwo">
+                        </div>
+                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkpanthree" id="checkpanthree">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td><div class="nostyletextboxcontainer">
+                        <label for="panthree">PAN3</label>                         
+                        <input type="text" id="panthree" name="panthree">
+                        </div>
+                     </td>
+                    <td colspan="3"><div class="nostyletextboxcontainer">
+                        <label for="panfour">PAN4</label>                         
+                        <input type="text" id="papanfour" name="panfour">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkverification" id="checkverification">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p>Verification</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkacknowledgement" id="checkacknowledgement">
+                        </div>                        
+                    </td>
+                    <!-- <td><li></li></td> -->
+                    <td colspan="4">
+                        <div class="acknowledge">
+                            I/We <input type="text" id="acknowledgement" name="acknowledgement"> the applicant
+                            is the capacity of 
+                            <select name="test" id="test">
+                                <option value="select">--Please Select--</option>
+                                <option value="test1">Test1</option>
+                                <option value="test2">Test2</option>
+                                <option value="test3">Test3</option>
+                                <option value="test4">Test4</option>
+                            </select> 
+                            the best of my information and belief I have enclosed 
+                           <input type="text" id="documents" name="documents">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkplace" id="checkplace">
+                        </div>                        
+                    </td>
+                    <!-- <td><li></li></td> -->
+                    <td colspan="4"><div class="nostyletextboxcontainer">
+                        <label for="place">Place</label>                    
+                        <input type="text" id="place" name="place">
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checktoday" id="checktoday">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p>DD-MM-YYYY</p>
+                    <p>Verified today 03-07-2020</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkproofs" id="checkproofs">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4">
+                        <div class ="dropdowncontainer"><p>I/We have enclosed
+                               <select name="proofofidentity" id="proofofidentity">
+                                <option value="select">--Please Select--</option>
+                                </select>
+                                as proof of identity                          
+                            <select name="proofofaddress" id="proofofaddress">
+                                <option value="select">--Please Select--</option>
+                            </select> 
+                            as proof of address.
+                            </p>
+                            <p>                            
+                            <select name="proofofdob" id="proofofdob">
+                                <option value="select">--Please Select--</option>
+                            </select> 
+                            as proof of date of birth                            
+                            <select name="proofofpan" id="proofofpan">
+                                <option value="select">--Please Select--</option>
+                            </select>
+                            as proof of PAN allocated. 
+                        </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkepanorphysical" id="checkepanorphysical">
+                        </div>                        
+                    </td>
+                    <td colspan="4"><p>
+                        Whether you wish to have? 
+                        <input type="radio" id="eandphysicalpan" name="epanorphysicalpan" value="Physical PAN card & e-PAN card ">
+                        <label for="eandphysicalpan">Physical PAN card & e-PAN card</label>
+                        <input type="radio" id="onlyepan" name="epanorphysicalpan" value="Only e-PAN Card">
+                        <label for="onlyepan">Only e-PAN Card</label>   
+                    </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkotherdetails" id="checkotherdetails">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p>Other Details</p></td> 
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkaccountdetails" id="checkaccountdetails">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p>1.Depository Account Details</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_dporclientid" id="check_dporclientid">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><div class="nostyletextboxcontainer">
+                        <label for="dpid">DP ID:</label> 
+                        <input type="text" id="dpid" name="dpid">
+                        <label for="clientid">Client ID:</label> 
+                        <input type="text" id="clientid" name="clientid">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="checkpaymentdetails" id="checkpaymentdetails">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p>2.Payment Details</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_paperless_details" id="check_paperless_details">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p>Other Details</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_paperless" id="check_paperless">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p>For paperless PAN Application
+                        <input type="radio" id="yes" name="paperlesspan" value="Yes">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="epanorphysicalpan" value="No">
+                        <label for="no">No</label> 
+                    </p> 
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_dsc" id="check_dsc">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td colspan="4"><p><input type="radio" id="dsc" name="dsc" value="DSC">
+                        <label for="dsc">DSC</label>
+                        <select name="dropdowndsc" id="dropdowndsc">
+                        <option value="select">--Please Select--</option>
+                        </select> 
+                        <span class="textdecorcontainer"><a href="#Guideline">Guideline for DSC User</a></span>
+                    </p>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_photoupload" id="check_photoupload">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td><p>Upload Photo</p></td>
+                    <td><input type="file" id="filePhotoUpload" name="photofilename"></td>
+                    <td colspan="2"><p>Upload Signature<input type="file" id="fileSignatureUpload" name="signaturefilename"></p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_documentupload" id="check_documentupload">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td><p>Upload Document</p></td>
+                    <td colspan="3"><input type="file" id="fileDocumentUpload" name="documentfilename"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_uploadedphoto" id="check_uploadedphoto">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td><p><span class="capitaltextcontainer">Already Uploaded Photo</span></p></td> 
+                    <td colspan="3"><input type="text" id="uploadedphoto" name="uploadedphoto"></td>   
+                </tr>
+                <tr> 
+                    <td>
+                    <div class="checkboxcontainer">
+                        <input type="checkbox" name="check_signatures" id="check_signatures">
+                    </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td>
+                        <p><span class="capitaltextcontainer">Already Uploaded Signatures</span></p>
+                    </td>
+                    <td colspan="3"><input type="text" id="signature" name="signature"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkboxcontainer">
+                            <input type="checkbox" name="check_uploaded_document" id="check_uploaded_document">
+                        </div>                        
+                    </td><!-- <td><li></li></td> -->
+                    <td><p><span class="capitaltextcontainer">Already Uploaded Documents</span></p></td>
+                    <td colspan="3"><textarea id="textarea_uploadeddocs" name="textarea_uploadeddocs"></textarea></td>
+                </tr>                
+                <tr>
+                    <td colspan="5">          
+                    <button class="button" role="button">Submit</button>
+                    </td>
+                </tr>
+            <!-- </ul>  -->            
+            </form>            
+        </table> 
+    </body>
+</html>

@@ -1,0 +1,146 @@
+*{
+margin:0;
+padding:0; 
+box-sizing:border-box;
+} 
+body{        
+    font-family:'Times New Roman', Times, serif;
+}       
+header{                     
+        background-color: brown;
+        text-align: center; 
+        color:white; 
+        padding:20px 25px; 
+        position: relative;                            
+}    
+.navbar ul{         
+    list-style: none;
+    background-color: black;       
+    text-align: center;             
+}
+.navbar li{
+    display:inline-block;             
+}
+.navbar a{
+    text-decoration:none ;
+    color:white;        
+    display:block;
+    padding:25px 20px; 
+    text-align: center;          
+}
+.navbar a:hover{
+    background-color:aquamarine;
+    color:green;
+    opacity: 0.5;
+} 
+
+table{
+    width:100%;
+    border-color: black;
+    border-width: 1px;
+    border:1px solid;    
+    padding:5px;
+} 
+table, tr, td{    
+    border-color: black;
+    border-width: 1px;
+    border:1px solid;
+    border-collapse: collapse;
+    padding:5px;
+}
+/* td{
+    width:max-content=20%;
+}  */
+/* .listcontainer li
+{
+    margin:0;    
+    list-style-type:square;
+ } */
+
+.greentext{
+    color: green;
+}
+.checkboxcontainer{   
+    margin:10px;      
+    text-align: center;
+    vertical-align: middle;
+}
+
+.textdecorcontainer{
+    text-decoration: underline;
+}
+.capitaltextcontainer{
+    text-transform: uppercase ;
+}
+
+.dropdowncontainer select{
+    width:328px;
+    display: inline-block;
+    border:1px solid black;
+    padding:2px 5px;
+}
+
+input[type="text"],input[type="email"], select { 
+    width:40%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 2px;    
+}
+
+input[type="text"]:focus {
+    background-color: lightblue;
+}
+
+input[type="radio"]
+{    
+    margin:5px,0;    
+}
+
+input[type="date"]{
+background-color:transparent;
+padding: 12px 15px;
+width:40%;
+outline:none;
+}
+
+.acknowledge input[type="text"],select {
+width:150px;
+display: inline-block;
+border:1px solid black;
+padding:2px 5px;
+}
+
+.nostyletextboxcontainer input[type="text"]
+{
+    width:150px;
+    display: inline-block;
+    border:1px solid black;
+    padding:2px 5px;  
+}
+
+.button{
+    background-color: green;
+    color: black;
+    border:none;
+    padding: 15px 20px; 
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;    
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width:99.5%;  
+    border-radius: 10px;  
+    vertical-align: middle;
+    position: relative;
+    letter-spacing: 4px;
+}
+
+
+
+
+
+
